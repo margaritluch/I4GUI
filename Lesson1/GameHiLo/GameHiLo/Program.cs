@@ -6,6 +6,10 @@ namespace GameHiLo
     {
         static void Main(string[] args)
         {
+            /*Lav et program som implementerer spillet Hi - Lo(gæt et tal).
+             I denne udgave af HI-Lo skal computeren vælge et tal mellem 1 og 100, og spilleren(brugeren) 
+             skal så gætte tallet. 
+            */
             int number;
             int guessedNumber;
             bool isGuessed = false;

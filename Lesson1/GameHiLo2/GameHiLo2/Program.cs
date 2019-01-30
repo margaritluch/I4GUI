@@ -14,7 +14,7 @@ namespace GameHiLo2
             /*Lav et program som implementerer spillet Hi - Lo(gæt et tal).
              I denne udgave af HI-Lo skal brugeren tænke på et tal mellem 1 og 100,
              og computeren skal så gætte tallet.*/
-       
+
             int guessedNumber;
             int number;
             bool isGuessed = false;
@@ -23,38 +23,37 @@ namespace GameHiLo2
             Console.WriteLine("Think of a number between 1 and 100");
             Console.WriteLine("I will make a guess");
             guessedNumber = new Random().Next(1, 100);
-          
+            Console.WriteLine("My guess is:" + guessedNumber);
+            Console.WriteLine("Tell me if I'm <H>igh,<L>ow or <E>qual?:");
 
             while (!isGuessed)
             {
-                Console.WriteLine("My guess is:" + guessedNumber);
-                Console.WriteLine("Tell me if I'm <H>igh,<L>ow or <E>qual?:");
                 string highLowOrEqual = Console.ReadLine();
 
                 if (highLowOrEqual.ToLower() == "h")
                 {
                     number = new Random().Next(1, guessedNumber);
                     Console.WriteLine("My guess is:" + number);
-                    Console.WriteLine("Tell me if I'm <H>igh,<L>ow or <E>qual?:");
+                    Console.WriteLine("Tell me if I'm <H>igh, <L>ow or <E>qual?:");
                 }
                 else if (highLowOrEqual.ToLower() == "l")
                 {
                     number = new Random().Next(guessedNumber, 100);
                     Console.WriteLine("My guess is:" + number);
-                    Console.WriteLine("Tell me if I'm <H>igh,<L>ow or <E>qual?:");
+                    Console.WriteLine("Tell me if I'm <H>igh, <L>ow or <E>qual?:");
                 }
-                else //if(highLowOrEqual.ToLower() == "e")
+                else if (highLowOrEqual.ToLower() == "e")
                 {
                     isGuessed = true;
                 }
-                //else
-                //{
-                    //Console.WriteLine("Wrong typo. Type <h> for high, <l> for low or <e> for equal. ");
-                //}
+                else
+                {
+                    Console.WriteLine("Wrong typo. Type <h> for high, <l> for low or <e> for equal. ");
+                }
             }
-            Console.WriteLine("***" + " " + "I GOT IT!"+ " " + "***");
-            Console.ReadKey();
 
+            Console.WriteLine("***" + " " + "I GOT IT!" + " " + "***");
+            Console.ReadKey();
         }
     }
 }

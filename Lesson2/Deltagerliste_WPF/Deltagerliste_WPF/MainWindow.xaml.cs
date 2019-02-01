@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -24,7 +25,8 @@ namespace Deltagerliste_WPF
         {
             //reading csv file from the path and putting data into array
             string path = @"C:\Users\Bruger\Desktop\GUI\02 deltagerliste.csv";
-            string[] lines = File.ReadAllLines(path);
+            // by encoding I'm solving the problem of danish æ, ø, å
+            string[] lines = File.ReadAllLines(path, Encoding.UTF7);
 
             //splitting lines into cells and putting into new array, using LINQ
             return lines.Select(line =>
@@ -32,7 +34,6 @@ namespace Deltagerliste_WPF
                 string[] data = line.Split(';');
 
                 // We return a person with the data in order.
-                //ToDO change it in a way to be able to see danish æ, ø, å
                 return new DeltagerListe(data[0], data[1], data[2],
                     data[3], data[4], data[5], data[6]);
             });

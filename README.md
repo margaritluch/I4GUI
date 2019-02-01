@@ -41,5 +41,7 @@ and descriptive documentation.
 * Microsoft Docs
 * :mag:  Uncle Google :smile: 
 
+![hour_of_code_3](https://user-images.githubusercontent.com/28351603/52134250-72ab3d00-2643-11e9-8cc1-e8b7c79d4fe3.jpg)
+
 
 

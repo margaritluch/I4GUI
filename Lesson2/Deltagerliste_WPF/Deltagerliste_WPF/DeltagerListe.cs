@@ -8,15 +8,15 @@ namespace Deltagerliste_WPF
 {
     public class DeltagerListe
     {
-        public int ID { get; set; }
+        public string ID { get; set; }
         public string Name { get; set; }
+        public string StudieNummer { get; set; }
+        public string Email { get; set; }
         public string Role { get; set; }
         public string Available { get; set; }
         public string Origin { get; set; }
-        public char StudieNummer { get; set; }
-        public char Email { get; set; }
-
-        public DeltagerListe(int id, string name, char studieNummer, char email,string role, string available, string origin )
+        
+        public DeltagerListe(string id, string name, string studieNummer, string email,string role, string available, string origin )
         {
             ID = id;
             Name = name;

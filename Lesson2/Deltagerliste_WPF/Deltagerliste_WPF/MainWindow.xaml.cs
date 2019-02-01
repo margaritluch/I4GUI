@@ -2,17 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 
 namespace Deltagerliste_WPF
@@ -25,31 +16,30 @@ namespace Deltagerliste_WPF
         public MainWindow()
         {
             InitializeComponent();
+            //we call the method that is reading the csv file and showing data in listviwe
             MyList.ItemsSource = ReadCSV();
         }
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
-        //public IEnumerable<DeltagerListe> ReadCSV(string fileName)
+
         public IEnumerable<DeltagerListe> ReadCSV()
         {
-            
+            //reading csv file from the path and putting data into array
             string path = @"C:\Users\Bruger\Desktop\GUI\02 deltagerliste.csv";
-       
-            //string[] lines = File.ReadAllLines(System.IO.Path.ChangeExtension(fileName, ".csv"));
             string[] lines = File.ReadAllLines(path);
-   
+
+            //splitting lines into cells and putting into new array, using LINQ
             return lines.Select(line =>
             {
                 string[] data = line.Split(';');
-                
+
                 // We return a person with the data in order.
-                //ToDO this line needs to e formatted, errorprone
-                return new DeltagerListe(Int32.Parse(data[0]),data[1], Convert.ToChar(data[2]), Convert.ToChar(data[3]),data[4], data[5], data[6]);
+                //ToDO change it in a way to be able to see danish æ, ø, å
+                return new DeltagerListe(data[0], data[1], data[2],
+                    data[3], data[4], data[5], data[6]);
             });
- 
         }
     }
 }

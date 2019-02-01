@@ -1,4 +1,4 @@
-# I4GUI-01 GUI programming
+# I4GUI-01 GUI programming :ghost:
 
 The Repositpory contains all the exercises and code examples used during the GUI programming course.
 

@@ -37,7 +37,7 @@ and descriptive documentation.
  
 
 ## Additional helping sources used in exercises
-* StackOverFlow
+* Stac Overflow
 * Microsoft Docs
 * :mag:  Uncle Google :smile: 
 

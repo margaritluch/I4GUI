@@ -20,10 +20,6 @@ namespace Deltagerliste_WPF
             MyList.ItemsSource = ReadCSV();
         }
 
-        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-        }
-
         public IEnumerable<DeltagerListe> ReadCSV()
         {
             //reading csv file from the path and putting data into array

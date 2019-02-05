@@ -20,9 +20,16 @@ namespace HullSpeed_opgaven
     /// </summary>
     public partial class MainWindow : Window
     {
+        //Sailboat s = new Sailboat();
         public MainWindow()
         {
             InitializeComponent();
+      
+        }
+
+        private void Calculate_Click(object sender, RoutedEventArgs e)
+        {
+           // Result.Text += s.Hullspeed();
         }
     }
 }

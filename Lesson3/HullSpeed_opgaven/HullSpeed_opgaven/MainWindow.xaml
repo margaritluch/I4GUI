@@ -9,21 +9,21 @@
 	<StackPanel>
 		<StackPanel>
 			<StackPanel.Orientation>Horizontal</StackPanel.Orientation>
-			<Label x:Name="nameLabel" Content="Name:" HorizontalAlignment="Left" Margin="20,25,0,0" VerticalAlignment="Top" />
-			<TextBox x:Name="nameText" HorizontalAlignment="Left" Height="23" Margin="25,25,0,0" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+			<Label x:Name="NameLabel" Content="Name:" HorizontalAlignment="Left" Margin="20,25,0,0" VerticalAlignment="Top" />
+			<TextBox x:Name="Name" HorizontalAlignment="Left" Height="23" Margin="25,25,0,0" Text="{Binding Path = Name}" VerticalAlignment="Top" Width="120"/>
 		</StackPanel>
 
 		<StackPanel>
 			<StackPanel.Orientation>Horizontal</StackPanel.Orientation>
-			<Label x:Name="lengthLabel" Content="Length:" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
-			<TextBox x:Name="lengthText" HorizontalAlignment="Left" Height="23" Margin="20,0,0,0"  Text="TextBox" VerticalAlignment="Top" Width="120"/>
-			<Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+			<Label x:Name="LengthLabel" Content="Length:" HorizontalAlignment="Left" Margin="20,0,0,0" VerticalAlignment="Top"/>
+			<TextBox x:Name="Length" HorizontalAlignment="Left" Height="23" Margin="20,0,0,0"  Text="{Binding Path = Length}" VerticalAlignment="Top" Width="120"/>
+			<Label Content="feet" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
 		</StackPanel>
 
 		<StackPanel>
 			<StackPanel.Orientation>Vertical</StackPanel.Orientation>
-			<Button x:Name="calculate" Content="Calculate Hull Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,10,10,10" Width="202"/>
-			<Label x:Name="result" Content="result" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="50,10,10,10" />
+			<Button x:Name="Calculate" Content="Calculate Hull Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,10,10,10" Width="202" Click="Calculate_Click"/>
+			<TextBox x:Name="Result" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="50,10,0,10" Width="152" />
 			<Viewbox Stretch="Uniform">
 				<Image Height="150" Width="150" Source="03-Sailboat (1).jpg" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="100,0,100,0" />
 			</Viewbox>

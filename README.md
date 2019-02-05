@@ -1,6 +1,6 @@
 # I4GUI-01 GUI programming :ghost:
 
-The Repositpory contains all the exercises and code examples used during the GUI programming course.
+The Repository contains all the exercises and code examples used during the GUI programming course.
 
 ## Repository structure
 

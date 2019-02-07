@@ -29,7 +29,7 @@
 			<Label Content="Hull Speed is :" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10" Width="173" />
 			<TextBox x:Name="Result" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="90,0,0,10" Width="152" Height="19" />
 			<Viewbox Stretch="Uniform">
-				<Image Name="myimage" Height="150" Width="150" Source="03-Sailboat (1).jpg" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="100,0,100,0" MouseDown="Image_MouseDown" />
+				<Image Name="myimage" Height="150" Width="150" Source="03-Sailboat (1).jpg" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="100,0,100,0" MouseDown="Image_MouseDown"  />
 			</Viewbox>
 		</StackPanel>
 	</StackPanel>

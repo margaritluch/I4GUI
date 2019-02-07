@@ -41,7 +41,7 @@ namespace HullSpeed_opgaven
                 this.FontSize--;
             }
 
-            if (Keyboard.IsKeyDown(Key.S) && Keyboard.IsKeyDown(Key.LeftCtrl))
+            else if (Keyboard.IsKeyDown(Key.S) && Keyboard.IsKeyDown(Key.LeftCtrl))
             {
                 this.FontSize++;
             }
@@ -52,6 +52,7 @@ namespace HullSpeed_opgaven
         
             if (e.LeftButton == MouseButtonState.Pressed)
             {
+                //making sure that the ship has name and escaping a nullpointerexception
                 if (s.Name != null && !string.IsNullOrWhiteSpace(s.Name))
                 {
                     MessageBox.Show("The name of the ship is" + " " + Name.Text);
@@ -63,5 +64,6 @@ namespace HullSpeed_opgaven
                 }
             }
         }
+
     }
 }

@@ -1,0 +1,16 @@
+﻿<Window x:Class="Lab05_analyzingUSBabyNames.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab05_analyzingUSBabyNames"
+        mc:Ignorable="d"
+        Title="Baby names analyze by decades" Height="350" Width="525">
+	<Grid>
+		<ListBox x:Name="lstDecadeTopNames" DisplayMemberPath="Name" HorizontalAlignment="Left" Height="239" Margin="218,40,0,0" VerticalAlignment="Top" Width="274" Loaded="lstDecadeTopNames_Loaded"/>
+		<ListBox x:Name="decadeName" SelectedValuePath="decades" HorizontalAlignment="Left" Height="239" Margin="35,40,0,0" VerticalAlignment="Top" Width="74" Loaded="decadeName_Loaded"/>
+		<Label x:Name="DecadesLabel" Content="Decades" HorizontalAlignment="Left" Margin="35,10,0,0" VerticalAlignment="Top" Width="74"/>
+		<Label x:Name="BabyNamesLabel"  Content="Top 10 baby names in selected decade" HorizontalAlignment="Left" Margin="218,10,0,0" VerticalAlignment="Top" Width="274"/>
+
+	</Grid>
+</Window>

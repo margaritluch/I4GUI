@@ -5,7 +5,6 @@ using System.Collections.ObjectModel;
 
 namespace I4GUI
 {
-
    public class Agent
    {
        private string _id;

@@ -53,6 +53,11 @@ namespace Part3
         {
             get { return Agents; }
         }
+
+        public void AddAnAgent()
+        {
+            Agents.Add(new Agent());
+        }
     }
 }
 

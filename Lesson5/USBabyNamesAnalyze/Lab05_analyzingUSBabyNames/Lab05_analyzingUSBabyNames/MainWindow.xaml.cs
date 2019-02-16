@@ -30,7 +30,8 @@ namespace Lab05_analyzingUSBabyNames
         public MainWindow()
         {
             InitializeComponent();
-            babies= new List<BabyName>();
+        
+            babies = new List<BabyName>();
             sr = new StreamReader(path);
                   
         }
@@ -52,6 +53,7 @@ namespace Lab05_analyzingUSBabyNames
             decadeName.ItemsSource = decades;
              //topNames = new string[babies,];
         }
+
 
    
     }

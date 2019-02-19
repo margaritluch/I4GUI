@@ -13,23 +13,11 @@ namespace Part3
             InitializeComponent();
         }
 
-        private void PreviousButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (NameListBox.SelectedIndex > 0)
-            {
-                NameListBox.SelectedIndex = --NameListBox.SelectedIndex;
-            }
-        }
+    
 
-        private void NextButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (NameListBox.SelectedIndex < NameListBox.Items.Count - 1)
-            {
-                NameListBox.SelectedIndex = ++NameListBox.SelectedIndex;
-            }
-        }
+    
 
-        private void AddButton_Click(object sender, RoutedEventArgs e)
+       /* private void AddButton_Click(object sender, RoutedEventArgs e)
         {
             var viewmodel = DataContext as MainWindowViewModel;
             if (viewmodel != null)
@@ -37,6 +25,6 @@ namespace Part3
                 viewmodel.AddAnAgent();
             }
             NameListBox.SelectedIndex = NameListBox.Items.Count + 1;
-        }
+        }*/
     }
 }

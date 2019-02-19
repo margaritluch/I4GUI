@@ -2,10 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace I4GUI
 {
-   public class Agent
+   public class Agent: INotifyPropertyChanged
    {
        private string _id;
        private string _codeName;
@@ -26,50 +28,56 @@ namespace I4GUI
 
       public string Id
       {
-         get
-         {
-            return _id;
-         }
-         set
-         {
-            _id = value;
-         }
-      }
+      
+          get { return this._id; }
+          set
+          {
+              if (this._id == value) { return; }
+              this._id = value;
+              Notify();
+          }
+        }
 
       public string CodeName
       {
-         get
-         {
-            return _codeName;
-         }
-         set
-         {
-            _codeName = value;
-         }
-      }
+          get { return this._codeName; }
+          set
+          {
+              if (this._codeName == value) { return; }
+              this._codeName = value;
+              Notify();
+          }
+        }
 
       public string Speciality
       {
-         get
-         {
-            return _speciality;
-         }
-         set
-         {
-            _speciality = value;
-         }
-      }
+          get { return this._speciality; }
+          set
+          {
+              if (this._speciality== value) { return; }
+              this._speciality = value;
+              Notify();
+          }
+        }
 
       public string Assignment
       {
-         get
-         {
-            return _assignment;
-         }
-         set
-         {
-            _assignment = value;
-         }
-      }
-   }
+          get { return this._assignment; }
+          set
+          {
+              if (this._assignment == value) { return; }
+              this._assignment = value;
+              Notify();
+          }
+        }
+
+
+       // INotifyPropertyChanged Members
+       public event PropertyChangedEventHandler PropertyChanged;
+
+       protected void Notify([CallerMemberName]string propName = null)
+       {
+           PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
+       }
+    }
 }

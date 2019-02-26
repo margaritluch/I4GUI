@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Agent_DataView", "Agent_DataView\Agent_DataView.csproj", "{5EF9DFFD-7DDA-4C37-87AD-04EC3D683FEE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5EF9DFFD-7DDA-4C37-87AD-04EC3D683FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF9DFFD-7DDA-4C37-87AD-04EC3D683FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF9DFFD-7DDA-4C37-87AD-04EC3D683FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF9DFFD-7DDA-4C37-87AD-04EC3D683FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AEA71310-F445-4B45-9D7B-76253AD1A4F0}
+	EndGlobalSection
+EndGlobal

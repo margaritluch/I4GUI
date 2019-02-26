@@ -7,14 +7,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Threading;
 using System.Xml.Serialization;
 using Prism.Commands;
 using Prism.Mvvm;
 
-namespace PrismOpgave
+namespace Prism_Resouces
 {
-    public class MainWindowViewModel : BindableBase
+   public  class MainWindowViewModel : BindableBase
     {
         ObservableCollection<Agent> Agents;
         private string filename = "";
@@ -248,6 +250,38 @@ namespace PrismOpgave
         void Timer_Tick(object sender, EventArgs e)
         {
             clock.Update();
+        }
+        ICommand _ColorCommand;
+        public ICommand ColorCommand
+        {
+            get
+            {
+                /* The ?? operator is called the null-coalescing operator.
+                 It returns the left-hand operand if the operand is not null; 
+                 otherwise it returns the right hand operand.*/
+                return _ColorCommand ?? (_ColorCommand = new
+                           DelegateCommand<String>(ColorCommand_Execute));
+            }
+        }
+
+        private void ColorCommand_Execute(String colorStr)
+        {
+            SolidColorBrush newBrush = SystemColors.WindowBrush; // Default color
+
+            try
+            {
+                if (colorStr != null)
+                {
+                    if (colorStr != "Default")
+                        newBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString(colorStr));
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unknown color name, default color is used", "Program error!");
+            }
+
+            Application.Current.Resources["MyBrush"] = newBrush;
         }
 
     }

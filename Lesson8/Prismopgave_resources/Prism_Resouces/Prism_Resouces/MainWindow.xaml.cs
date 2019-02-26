@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PrismOpgave
+namespace Prism_Resouces
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,11 +23,6 @@ namespace PrismOpgave
         public MainWindow()
         {
             InitializeComponent();
-        }
-
-        private void chooseGreenSkin_Checked(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

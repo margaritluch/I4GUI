@@ -1,0 +1,25 @@
+﻿<Window x:Class="Switch_Task_Del3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Switch_Task_Del3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,122,269,0">
+		<Button x:Name="Light" 
+		        Content="Button" 
+		        HorizontalAlignment="Left"
+		        Margin="143,58,0,0" 
+		        VerticalAlignment="Top" 
+		        Width="128" 
+		        Height="84"
+		   />
+		<Button>
+			<StackPanel>
+				<Image Source="Images/12-LightOFF.bmp"/>
+			</StackPanel>
+		</Button>
+
+	</Grid>
+</Window>
